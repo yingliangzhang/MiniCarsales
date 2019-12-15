@@ -15,7 +15,7 @@ const CarCard = ({ car }) => (
         <CardBody>
             <CardTitle>{car.make} {car.model}</CardTitle>
             <CardSubtitle>{car.bodyType} {car.engine}</CardSubtitle>
-            <CardText>Doors: {car.numberOfDoors}</CardText>
+            <CardText>Doors: {car.numberOfDoors}, Wheels: {car.numberOfWheels}</CardText>
         </CardBody>
     </Card>
 )
