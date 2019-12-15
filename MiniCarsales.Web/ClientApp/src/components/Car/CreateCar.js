@@ -133,32 +133,32 @@ class CreateCar extends React.Component {
                 <div className="row justify-content-md-center">
                     <div className="col-md-8">
                         <Form onSubmit={this.handleSubmit}>
-                            <FormGroup>
+                            <FormGroup className="required">
                                 <Label for="make">Make</Label>
                                 <Input invalid={newCar.errors.make.length > 0} type="text" name="make" id="make" placeholder="Enter make of the car" value={newCar.make} onChange={this.handleOnChange}/>
                                 { newCar.errors.make.length > 0 && <FormFeedback>{newCar.errors.make}</FormFeedback> }
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className="required">
                                 <Label for="model">Model</Label>
                                 <Input invalid={newCar.errors.model.length > 0} type="text" name="model" id="model" placeholder="Enter model of the car" value={newCar.model} onChange={this.handleOnChange}/>
                                 { newCar.errors.model.length > 0 && <FormFeedback>{newCar.errors.model}</FormFeedback> }
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className="required">
                                 <Label for="engine">Engine</Label>
                                 <Input invalid={newCar.errors.engine.length > 0} type="text" name="engine" id="engine" placeholder="Enter engine type of the car" value={newCar.engine} onChange={this.handleOnChange}/>
                                 { newCar.errors.engine.length > 0 && <FormFeedback>{newCar.errors.engine}</FormFeedback> }
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className="required">
                                 <Label for="numberOfDoors">Number of Doors</Label>
                                 <Input invalid={newCar.errors.numberOfDoors.length > 0} type="number" min="1" max="10" name="numberOfDoors" id="numberOfDoors" placeholder="Enter number of doors of the car" value={newCar.numberOfDoors} onChange={this.handleOnChange}/>
                                 { newCar.errors.numberOfDoors.length > 0 && <FormFeedback>{newCar.errors.numberOfDoors}</FormFeedback> }
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className="required">
                                 <Label for="numberOfWheels">Number of Wheels</Label>
                                 <Input invalid={newCar.errors.numberOfWheels.length > 0} type="number" min="2" max="8" name="numberOfWheels" id="numberOfWheels" placeholder="Enter number of wheels of the car" value={newCar.numberOfWheels} onChange={this.handleOnChange}/>
                                 { newCar.errors.numberOfWheels.length > 0 && <FormFeedback>{newCar.errors.numberOfWheels}</FormFeedback> }
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className="required">
                                 <Label for="bodyType">Body Type</Label>
                                 <Input invalid={newCar.errors.bodyType.length > 0} type="select" name="bodyType" id="bodyType" value={newCar.bodyType} onChange={this.handleOnChange}>
                                     <option value="" disabled>Please select body type</option>

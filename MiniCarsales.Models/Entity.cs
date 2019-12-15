@@ -1,9 +1,8 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MiniCarsales.Models
 {
-    public class Entity : IEntity
+    public class Entity
     {
         public Entity()
         {

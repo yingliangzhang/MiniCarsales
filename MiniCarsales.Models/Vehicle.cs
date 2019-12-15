@@ -4,7 +4,7 @@ using static MiniCarsales.Models.CustomValidations.VehicleTypeAttribute;
 
 namespace MiniCarsales.Models
 {
-    public abstract class Vehicle : Entity, IEntity
+    public abstract class Vehicle : Entity
     {
         [Required]
         [MaxLength(30)]

@@ -12,3 +12,8 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.required.form-group label:after {
+  content:" *";
+  color:red;
+}
