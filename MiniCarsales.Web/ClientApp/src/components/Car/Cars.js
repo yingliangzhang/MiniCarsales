@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { fetchCars } from '../../actions/car/fetchCars'
 import PropTypes from 'prop-types'
 import { Spinner } from 'reactstrap'
 import CarCard from './CarCard' 
 
-class Cars extends React.Component {
+export class Cars extends React.Component {
     componentDidMount() {
         const {
             fetchCars,
@@ -19,15 +20,22 @@ class Cars extends React.Component {
 
         if (fetchingCars) {
             return <Spinner type="grow" color="primary" />
-            
         } else {
             return(
                 <div className="container">
                     <div className="row">
-                        {cars.map(car => (
-                        <div className="col-md-4">
-                            <CarCard car={car} key={car.id}/>
-                        </div>))}
+                        <div className="col-md-12">
+                            <h1 className="text-center">All Cars</h1>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {
+                            cars.map(car => (
+                                <div className="col-md-4" key={car.id}>
+                                    <CarCard car={car}/>
+                                </div>)
+                            )
+                        }
                     </div>
                 </div>
             )
@@ -49,7 +57,7 @@ const mapDispatchToProps = {
     fetchCars
 }
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(Cars)
+)(Cars))

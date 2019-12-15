@@ -1,4 +1,5 @@
 import fetch from 'cross-fetch'
+import { showAlert } from '../showAlert';
 
 export const FETCHING_CARS = 'FETCHING_CARS'
 export const FETCHED_CARS = 'FETCHED_CARS'
@@ -18,9 +19,13 @@ function fetchedCars(cars) {
 
 export function fetchCars() {
     return async(dispatch) => {
-        dispatch(fetchingCars())
-        const response = await fetch('/api/cars')
-        const cars = await response.json()
-        dispatch(fetchedCars(cars))
+        try {
+            dispatch(fetchingCars())
+            const response = await fetch('/api/cars')
+            const cars = await response.json()
+            dispatch(fetchedCars(cars))
+        } catch (error) {
+            dispatch(showAlert(true, 'danger', `There was an error fetching cars, please try again. ${error}`))
+        }
     }
 }
