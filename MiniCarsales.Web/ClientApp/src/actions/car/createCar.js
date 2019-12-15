@@ -19,7 +19,6 @@ function createdCar(newCar) {
 
 export function createCar(car) {
     return async(dispatch) => {
-        dispatch(showAlert(true, 'success', 'New car has been created'))
 
         try {
             dispatch(creatingCar())
