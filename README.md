@@ -17,7 +17,7 @@ A vehicle management system that for MVP will only cater for cars, but in the fu
 
 ## Run Tests
 ### Frontend Tests
-* `cd MiniCarsales.Web/ClientApp` then run `npm run test`
+* `cd MiniCarsales.Web/ClientApp` then run `npm test a`
 
 ### Backend Test
 * Run tests using Visual Studio test explorer
