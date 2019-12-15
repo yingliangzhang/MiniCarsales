@@ -9,7 +9,7 @@ A vehicle management system that for MVP will only cater for cars, but in the fu
 
 ## Up & Running
 * Clone the project
-* Use Visual Studio 2019 and open `MiniCarsales.sln` and run using `MiniCarsales.Web` project
+* Use Visual Studio 2019 and open `MiniCarsales.sln` and run using `MiniCarsales.Web` project and `MiniCarsales` profile
 * Or open termial and `cd MiniCarsales.Web/` then run `dotnet run`
 * The Api is accessible at [https://localhost:5001/api/cars](https://localhost:5001/api/cars) or [http://localhost:5000/api/cars](http://localhost:5000/api/cars)
 * If need to restore the database, delete the db file at `MiniCarsales.Web/App_Data/MiniCarsales.db`, then open
