@@ -12,6 +12,7 @@ using MiniCarsales.Repositories;
 using MiniCarsales.Services;
 using AutoMapper;
 using System.Reflection;
+using Microsoft.OpenApi.Models;
 
 namespace MiniCarsales
 {
@@ -35,14 +36,21 @@ namespace MiniCarsales
             services.AddAutoMapper(Assembly.GetAssembly(typeof(Startup)));
 
             // Add Services and Repositories
-            services.AddTransient<CarService, CarService>();
-            services.AddTransient<CarRepository, CarRepository>();
+            services.AddTransient(typeof(IVehicleRepository<>), typeof(VehicleRepository<>));
+            services.AddTransient(typeof(IVehicleService<>), typeof(VehicleService<>));
+
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
+            });
+
+            // Register the Swagger generator
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MiniCarsales Api", Version = "v1" });
             });
         }
 
@@ -59,6 +67,12 @@ namespace MiniCarsales
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MiniCarsales Api V1");
+            });
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

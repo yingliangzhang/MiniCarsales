@@ -9,9 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Models", "Mini
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Repositories", "MiniCarSales.Repositories\MiniCarsales.Repositories.csproj", "{04BE7F9B-A2F9-47D1-8A76-D39766FF9A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCarsales.Services", "MiniCarsales.Services\MiniCarsales.Services.csproj", "{5BE509B9-62E6-47FB-8203-3F0E6B9B560D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Services", "MiniCarsales.Services\MiniCarsales.Services.csproj", "{5BE509B9-62E6-47FB-8203-3F0E6B9B560D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCarsales.Dtos", "MiniCarsales.Dtos\MiniCarsales.Dtos.csproj", "{D00CD84B-7DDA-4B7C-9DA1-73753C63DACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Dtos", "MiniCarsales.Dtos\MiniCarsales.Dtos.csproj", "{D00CD84B-7DDA-4B7C-9DA1-73753C63DACD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F0CF4C79-AB6C-4EF7-A51C-5CA6E725F01B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{D7151E57-99C7-4C62-94E3-98D331033DD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Api.Test.Integration", "MiniCarsales.Api.Test.Integration\MiniCarsales.Api.Test.Integration.csproj", "{E769576E-C26E-470A-BB72-9652B6CD1A74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{C2DA6708-C906-4229-B550-1AD45F4CC97E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Controllers.Test.Unit", "MiniCarsales.Controllers.Test.Unit\MiniCarsales.Controllers.Test.Unit.csproj", "{3AD95D46-2470-418A-A6BE-8350E3C49272}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCarsales.Services.Test.Unit", "MiniCarsales.Services.Test.Unit\MiniCarsales.Services.Test.Unit.csproj", "{469EB723-3D09-4B45-8C70-DCEF9DAA605F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +51,28 @@ Global
 		{D00CD84B-7DDA-4B7C-9DA1-73753C63DACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D00CD84B-7DDA-4B7C-9DA1-73753C63DACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D00CD84B-7DDA-4B7C-9DA1-73753C63DACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E769576E-C26E-470A-BB72-9652B6CD1A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E769576E-C26E-470A-BB72-9652B6CD1A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E769576E-C26E-470A-BB72-9652B6CD1A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E769576E-C26E-470A-BB72-9652B6CD1A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD95D46-2470-418A-A6BE-8350E3C49272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD95D46-2470-418A-A6BE-8350E3C49272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD95D46-2470-418A-A6BE-8350E3C49272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD95D46-2470-418A-A6BE-8350E3C49272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469EB723-3D09-4B45-8C70-DCEF9DAA605F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469EB723-3D09-4B45-8C70-DCEF9DAA605F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469EB723-3D09-4B45-8C70-DCEF9DAA605F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469EB723-3D09-4B45-8C70-DCEF9DAA605F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7151E57-99C7-4C62-94E3-98D331033DD8} = {F0CF4C79-AB6C-4EF7-A51C-5CA6E725F01B}
+		{E769576E-C26E-470A-BB72-9652B6CD1A74} = {D7151E57-99C7-4C62-94E3-98D331033DD8}
+		{C2DA6708-C906-4229-B550-1AD45F4CC97E} = {F0CF4C79-AB6C-4EF7-A51C-5CA6E725F01B}
+		{3AD95D46-2470-418A-A6BE-8350E3C49272} = {C2DA6708-C906-4229-B550-1AD45F4CC97E}
+		{469EB723-3D09-4B45-8C70-DCEF9DAA605F} = {C2DA6708-C906-4229-B550-1AD45F4CC97E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B3158F8-23C5-41B5-9D2D-D59B0E672EF3}
