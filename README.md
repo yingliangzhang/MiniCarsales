@@ -8,7 +8,7 @@ A vehicle management system that for MVP will only cater for cars, but in the fu
 * npm 6.9.0
 
 ## Up & Running
-* Clone the prject
+* Clone the project
 * Use Visual Studio 2019 and open `MiniCarsales.sln` and run using `MiniCarsales.Web` project
 * Or open termial and `cd MiniCarsales.Web/` then run `dotnet run`
 * The Api is accessible at [https://localhost:5001/api/cars](https://localhost:5001/api/cars) or [http://localhost:5000/api/cars](http://localhost:5000/api/cars)
