@@ -50,7 +50,7 @@ export class NavMenu extends Component {
                     Cars
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem>
+                    <DropdownItem tag={Link} to="/create-car">
                       Create Car
                     </DropdownItem>
                   </DropdownMenu>
