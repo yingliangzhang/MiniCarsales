@@ -11,7 +11,6 @@ namespace MiniCarsales.Models
         {
             Type = VehicleType.Car;
         }
-
         [Required]
         [Range(2, 8)]
         public int NumberOfWheels { get; set; }
