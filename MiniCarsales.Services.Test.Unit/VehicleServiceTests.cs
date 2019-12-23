@@ -31,7 +31,6 @@ namespace MiniCarsales.Services.Test.Unit
             var expected = new Car
             {
                 Id = Guid.NewGuid(),
-                Type = VehicleType.Car,
                 Make = "Toyota",
                 Model = "Yaris",
                 NumberOfWheels = 4,
@@ -53,9 +52,9 @@ namespace MiniCarsales.Services.Test.Unit
             // Arrange
             var expected = new List<Car>()
             {
-                new Car { Id = Guid.NewGuid(), Type = VehicleType.Car, Make = "Toyota", Model = "Yaris", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V4", BodyType = CarBodyType.Sedan },
-                new Car { Id = Guid.NewGuid(), Type = VehicleType.Car, Make = "Toyota", Model = "RAV4", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V6", BodyType = CarBodyType.Hatchback },
-                new Car { Id = Guid.NewGuid(), Type = VehicleType.Truck, Make = "Ford", Model = "Ranger", NumberOfWheels = 4, NumberOfDoors = 4, Engine = "V8", BodyType = CarBodyType.Sedan }
+                new Car { Id = Guid.NewGuid(), Make = "Toyota", Model = "Yaris", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V4", BodyType = CarBodyType.Sedan },
+                new Car { Id = Guid.NewGuid(), Make = "Toyota", Model = "RAV4", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V6", BodyType = CarBodyType.Hatchback },
+                new Car { Id = Guid.NewGuid(), Make = "Ford", Model = "Ranger", NumberOfWheels = 4, NumberOfDoors = 4, Engine = "V8", BodyType = CarBodyType.Sedan }
             };
 
             _vehicleRepositoryMock

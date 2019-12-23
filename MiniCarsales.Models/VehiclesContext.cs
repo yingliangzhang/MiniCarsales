@@ -26,17 +26,17 @@ namespace MiniCarsales.Models
         {
             var entries = ChangeTracker
                 .Entries()
-                .Where(e => e.Entity is Entity && (
+                .Where(e => e.Entity is IVehicle && (
                         e.State == EntityState.Added
                         || e.State == EntityState.Modified));
 
             foreach (var entityEntry in entries)
             {
-                ((Entity)entityEntry.Entity).UpdatedAT = DateTime.Now;
+                ((IVehicle)entityEntry.Entity).UpdatedAT = DateTime.Now;
 
                 if (entityEntry.State == EntityState.Added)
                 {
-                    ((Entity)entityEntry.Entity).CreatedAt = DateTime.Now;
+                    ((IVehicle)entityEntry.Entity).CreatedAt = DateTime.Now;
                 }
             }
 

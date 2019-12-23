@@ -19,7 +19,6 @@ namespace MiniCarsales.Api.Test.Integration
                 new Car
                 {
                     Id = car1Id,
-                    Type = VehicleType.Car,
                     Make = "Toyota",
                     Model = "Yaris",
                     NumberOfWheels = 4,
@@ -30,7 +29,6 @@ namespace MiniCarsales.Api.Test.Integration
                 new Car
                 {
                     Id = car2Id,
-                    Type = VehicleType.Car,
                     Make = "Toyota",
                     Model = "RAV4",
                     NumberOfWheels = 4,
@@ -41,7 +39,6 @@ namespace MiniCarsales.Api.Test.Integration
                 new Car
                 {
                     Id = car3Id,
-                    Type = VehicleType.Truck,
                     Make = "Ford",
                     Model = "Ranger",
                     NumberOfWheels = 4,

@@ -35,9 +35,9 @@ namespace MiniCarsales.Controllers.Test.Unit
             // Arrange
             var expected = new List<Car>()
             {
-                new Car { Id = Guid.NewGuid(), Type = "Car", Make = "Toyota", Model = "Yaris", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V4", BodyType = "Sedan" },
-                new Car { Id = Guid.NewGuid(), Type = "Car", Make = "Toyota", Model = "RAV4", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V6", BodyType = "Hatchback" },
-                new Car { Id = Guid.NewGuid(), Type = "Truck", Make = "Ford", Model = "Ranger", NumberOfWheels = 4, NumberOfDoors = 4, Engine = "V8", BodyType = "Sedan" }
+                new Car { Id = Guid.NewGuid(), Make = "Toyota", Model = "Yaris", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V4", BodyType = "Sedan" },
+                new Car { Id = Guid.NewGuid(), Make = "Toyota", Model = "RAV4", NumberOfWheels = 4, NumberOfDoors = 5, Engine = "V6", BodyType = "Hatchback" },
+                new Car { Id = Guid.NewGuid(), Make = "Ford", Model = "Ranger", NumberOfWheels = 4, NumberOfDoors = 4, Engine = "V8", BodyType = "Sedan" }
             };
 
             _carServiceMock.Setup(c => c.GetAllAsync()).ReturnsAsync(expected);
@@ -60,7 +60,6 @@ namespace MiniCarsales.Controllers.Test.Unit
             // Arrange
             var car = new Car {
                 Id = Guid.NewGuid(),
-                Type = "Car",
                 Make = "Toyota",
                 Model = "Yaris",
                 NumberOfWheels = 4,

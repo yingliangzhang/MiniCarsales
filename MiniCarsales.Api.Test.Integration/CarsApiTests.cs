@@ -61,7 +61,6 @@ namespace MiniCarsales.Api.Test.Integration
             var car = new Car
             {
                 Id = Guid.NewGuid(),
-                Type = VehicleType.Car,
                 Make = "Toyota",
                 Model = "Yaris",
                 NumberOfWheels = 4,
