@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace MiniCarsales.Services
 {
-    public interface IVehicleService<TEntity> where TEntity : Entity
+    public interface IVehicleService<TEntity> where TEntity : class
     {
         Task<List<TEntity>> GetAllAsync();
         Task<TEntity> CreateAysnc(TEntity entity);

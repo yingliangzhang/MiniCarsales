@@ -7,7 +7,7 @@ using MiniCarsales.Repositories;
 
 namespace MiniCarsales.Services
 {
-    public class VehicleService<TEntity> : IVehicleService<TEntity> where TEntity : Entity
+    public class VehicleService<TEntity> : IVehicleService<TEntity> where TEntity : class
     {
         private readonly IVehicleRepository<TEntity> _vehicleRepository;
 

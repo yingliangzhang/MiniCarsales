@@ -7,7 +7,7 @@ using MiniCarsales.Models;
 
 namespace MiniCarsales.Repositories
 {
-    public class VehicleRepository<TEntity> : IVehicleRepository<TEntity> where TEntity : Entity
+    public class VehicleRepository<TEntity> : IVehicleRepository<TEntity> where TEntity : class
     {
         private readonly VehiclesContext _vehicleContext;
 
